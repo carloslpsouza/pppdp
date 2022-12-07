@@ -1,0 +1,38 @@
+/* General */
+
+body {
+  min-height: 100vh;
+  padding-bottom: 100px;
+  position: relative;
+  /* referencia para os elementos filhos em posição absoluta */
+}
+
+header {
+  background: #FFF;
+  border-bottom: 1px solid #CCC;
+}
+
+.row {
+  margin: 0;
+}
+
+.conteiner-fluid {
+  padding: 0;
+}
+
+
+
+/* footer */
+footer{
+  text-align: center;
+  background-color: #353e48;
+  color: #FFF;
+  padding: 30px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p{
+  margin: 0;
+}
