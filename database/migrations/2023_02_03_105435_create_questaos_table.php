@@ -18,6 +18,9 @@ return new class extends Migration
             $table->longText('pergunta');
             $table->timestamps();
 
+            $table->unsignedBigInteger('id_dependencia')->nullable();
+            $table->foreign('id_dependencia')->references('id')->on('questoes')->onDelete('cascade')->onUpdate('cascade');
+
             $table->unsignedBigInteger('id_entrada');
             $table->foreign('id_entrada')->references('id')->on('entradas')->onDelete('cascade')->onUpdate('cascade');
 
