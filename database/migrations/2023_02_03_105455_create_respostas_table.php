@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('respostas', function (Blueprint $table) {
             $table->id();
             $table->longText('respostas');
+            $table->longText('complemento');
             $table->timestamps();
 
             $table->unsignedBigInteger('id_usuario');
