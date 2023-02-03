@@ -1,8 +1,7 @@
 <?php
 
-use App\Http\Controllers\ControllerQuestao;
+use App\Http\Controllers\QuestaoController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ControllerQuestion;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +14,4 @@ use App\Http\Controllers\ControllerQuestion;
 |
 */
 
-Route::get('/', [ControllerQuestion::class, 'index']);
+Route::get('/', [QuestaoController::class, 'index']);
