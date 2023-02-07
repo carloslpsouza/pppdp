@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Entrada;
 use App\Models\Questao;
 use Illuminate\Http\Request;
 
@@ -14,8 +15,9 @@ class QuestaoController extends Controller
      */
     public function index()
     {
+        $entradas = Entrada::all();
         $questoes = Questao::all();
-        return view('principal', ['questions' => $questoes]);
+        return view('principal', ['questions' => $questoes, 'entradas' => $entradas]);
     }
 
     /**

@@ -22,6 +22,40 @@
 <body>
     <div class="conteiner-fluid">
         <div class="row">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <div class="collapse navbar-collapse" id="navbar">
+                <a href="/" class="navbar-brand"></a>
+                  <ul class="navbar-nav">
+                    <li class="nav-item">
+                      <a href="/" class="nav-link">Home</a>
+                    </li>
+                    @auth
+                    <li class="nav-item">
+                      <a href="/dashboard" class="nav-link">Painel</a>
+                    </li>
+                    <li class="nav-item">
+                      <form action="/logout" method="POST">
+                        @csrf            
+                        <a href="/logout"
+                        class="nav-link"
+                        onclick="event.preventDefault();
+                          this.closest('form').submit();">
+                          Sair
+                        </a>
+                      </form>
+                    </li> 
+                    @endauth
+                    @guest
+                    <li class="nav-item">
+                      <a href="/login" class="nav-link">Entrar</a>
+                    </li>
+                    <li class="nav-item">
+                      <a href="/register" class="nav-link">Cadastrar</a>
+                    </li>   
+                    @endguest
+                  </ul>
+                </div>
+              </nav>
             @yield('content')
         </div>
     </div>
