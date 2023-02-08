@@ -20,7 +20,40 @@ header {
   padding: 0;
 }
 
+#nav-bar{
+  justify-content: space-between;
+  background-color: #CCC;
+  padding: 5px 0;
+}
 
+#painel{
+  margin: 0;
+}
+
+#card-conteiner{
+  display: flex;
+}
+
+#card{
+  flex: 1 1 0;
+  max-width: 24%;
+  border-radius: 5px;
+  padding: 0;
+  margin: .5px;
+}
+
+#card-content{
+  text-align: center;
+  text-decoration: none;
+}
+
+.grisco{
+  border-radius: 0;
+  background-color: green;
+  height: 50px;
+  width: 100%;
+  margin: 5px 0;
+}
 
 /* footer */
 footer{
